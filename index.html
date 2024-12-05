@@ -6,12 +6,39 @@
     <title>Page Hello World</title>
     <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Personnalisation des boutons si besoin */
+        .btn {
+            font-size: 18px;
+        }
+
+        /* Styles personnalisés pour la barre de navigation */
+        .navbar-custom {
+            background-color: #007bff; /* Couleur par défaut, modifiable */
+        }
+
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .nav-link {
+            color: #fff; /* Couleur du texte de la navbar */
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #d4d4d4; /* Couleur du texte au survol */
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <a class="navbar-brand" href="index.html">Stage Alexy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
