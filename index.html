@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Hello World</title>
+    <title>Rapport de Stage - Accueil</title>
     <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -39,7 +39,7 @@
 
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="index.html">Stage Alexy</a>
+        <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,8 +48,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projets.html">Projets</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="composant.html">Voir les composants</a>
+                        <a class="dropdown-item" href="snake.html">Jouer à Snake</a>
+                        <a class="dropdown-item" href="question_reponse.html">Voir les questions et réponses</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="competences.html">Compétences</a>
@@ -63,15 +70,9 @@
 
     <!-- Contenu principal -->
     <div class="container text-center mt-5">
-        <h1 class="display-4">Hello, World!</h1>
-        <div class="mt-4">
-            <!-- Bouton pour rediriger vers la page des composants -->
-            <a href="composant.html" class="btn btn-primary btn-lg m-2">Voir les composants</a>
-            <!-- Bouton pour rediriger vers le jeu Snake -->
-            <a href="snake.html" class="btn btn-primary btn-lg m-2">Jouer à Snake</a>
-            <!-- Bouton pour rediriger vers la page des questions et réponses -->
-            <a href="question_reponse.html" class="btn btn-primary btn-lg m-2">Voir les questions et les réponses</a>
-        </div>
+        <h1 class="display-4">Bienvenue sur le Rapport de Stage</h1>
+        <p class="lead">Ce site est conçu pour présenter l'ensemble des travaux réalisés durant mon stage, les compétences acquises ainsi que mon tuteur de stage.</p>
+        <p>Vous trouverez dans les sections ci-dessus toutes les informations relatives aux projets auxquels j'ai participé, aux compétences développées, et aux détails concernant mon tuteur.</p>
     </div>
 
     <!-- Pied de page -->
