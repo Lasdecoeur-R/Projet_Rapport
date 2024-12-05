@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Déclaration du type de document HTML et spécification de la langue en français -->
+    <meta charset="UTF-8">
+    <!-- Déclaration de l'encodage des caractères en UTF-8 pour gérer les accents -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Questions et Réponses</title>
+</head>
+<style>
+    /* Style général du corps de la page */
+    body {
+        font-family: Arial, sans-serif; /* Police d'écriture */
+        line-height: 1.6; /* Hauteur des lignes pour une meilleure lisibilité */
+        background-color: #f4f4f4; /* Couleur de fond gris clair */
+        color: #000000; /* Couleur du texte */
+        margin: 0; /* Suppression des marges par défaut */
+        padding: 20px; /* Espacement interne autour du contenu */
+    }
+    /* Style du titre principal */
+    h1 {
+        text-align: center; /* Centrer le titre */
+        color: #444; /* Couleur du texte */
+        font-size: 36px; /* Taille de la police */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+    }
+    /* Style des sections contenant chaque résumé */
+    section {
+        margin-bottom: 20px; /* Espacement entre les sections */
+        background: #fff; /* Fond blanc pour chaque section */
+        padding: 15px; /* Espacement interne autour du texte */
+        border-radius: 8px; /* Bords arrondis */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'effet de relief */
+    }
+    /* Style des titres secondaires (noms des composants) */
+    h2 {
+        color: #555; /* Couleur du texte */
+    }
+    /* Style du bouton de redirection */
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff; /* Couleur de fond bleu */
+        color: white; /* Couleur du texte */
+        border: none; /* Suppression des bordures */
+        border-radius: 5px; /* Coins arrondis */
+        text-decoration: none; /* Suppression du soulignement */
+        text-align: center; /* Centrer le texte */
+        cursor: pointer; /* Curseur de pointeur */
+    }
+    .btn:hover {
+        background-color: #0056b3; /* Changement de couleur au survol */
+    }
+</style>
+<body>
+     <!-- Bouton pour rediriger vers index.html -->
+     <a href="index.html" class="btn">Retour à l'accueil</a>
+     <!-- Bouton pour rediriger vers snake.html -->
+     <a href="snake.html" class="btn">jouer à snake</a>
+      <!-- Bouton pour rediriger vers composant.html -->
+      <a href="composant.html" class="btn">voir les composants</a>
+    <!-- En-tête de la page -->
+    <header>
+        <h1>Questions et Réponses</h1> <!-- Titre principal -->
+    </header>
+    
+    <!-- Contenu principal de la page -->
+    <main>
+        <!-- Section pour la question 1 -->
+        <section>
+            <h2>1. Cette entreprise est elle une usine, un magasin ou un bureau ?:</h2> <!-- Titre de la question -->
+            <p>L'entreprise dans laquelle je travail est une association</p>
+            <p> Voici les différents types d'entreprises</p>
+            <h1>Formes juridiques et leurs caractéristiques</h1>
+    <table border="1" style="width:100%; border-collapse:collapse;">
+        <thead>
+            <tr>
+                <th>Forme juridique</th>
+                <th>Définition</th>
+                <th>Caractéristiques principales</th>
+                <th>Avantages</th>
+                <th>Inconvénients</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>EI : Entreprise individuelle</td>
+                <td>Forme simple d’entreprise où une seule personne est responsable des activités.</td>
+                <td>Pas de distinction entre le patrimoine personnel et celui de l’entreprise.</td>
+                <td>Facile à créer, gestion simplifiée, coût faible.</td>
+                <td>Responsabilité illimitée : le patrimoine personnel est engagé.</td>
+            </tr>
+            <tr>
+                <td>EURL : Entreprise unipersonnelle à responsabilité limitée (SARL unipersonnelle)</td>
+                <td>SARL avec un seul associé.</td>
+                <td>Responsabilité limitée au montant des apports.</td>
+                <td>Sécurise le patrimoine personnel, gestion simplifiée.</td>
+                <td>Formalités administratives plus complexes qu'une EI.</td>
+            </tr>
+            <tr>
+                <td>SARL : Société à responsabilité limitée</td>
+                <td>Société composée de 2 à 100 associés, responsabilité limitée aux apports.</td>
+                <td>Encadrement légal strict, capital minimum non requis.</td>
+                <td>Protection du patrimoine des associés, structure adaptée aux petites et moyennes entreprises.</td>
+                <td>Processus de création et gestion plus rigides que d'autres formes.</td>
+            </tr>
+            <tr>
+                <td>SA : Société anonyme</td>
+                <td>Société dédiée aux grandes entreprises, nécessitant un capital minimum (37 000 € en France).</td>
+                <td>Dirigée par un conseil d’administration ou un directoire.</td>
+                <td>Permet de lever des fonds importants, adaptée aux grandes structures.</td>
+                <td>Création et gestion complexes, exige un capital important.</td>
+            </tr>
+            <tr>
+                <td>SAS : Société par actions simplifiée</td>
+                <td>Société flexible dirigée par un président, adaptée à plusieurs associés.</td>
+                <td>Grande liberté statutaire, capital minimum non requis.</td>
+                <td>Souplesse de gestion, attrayante pour les investisseurs.</td>
+                <td>Peut devenir complexe en cas d'absence de bonne structuration statutaire.</td>
+            </tr>
+            <tr>
+                <td>SASU : Société par actions simplifiée unipersonnelle</td>
+                <td>Variante de la SAS avec un seul associé.</td>
+                <td>Responsabilité limitée aux apports, grande souplesse dans l’organisation.</td>
+                <td>Adaptée aux entrepreneurs individuels souhaitant protéger leur patrimoine.</td>
+                <td>Gestion plus lourde qu’une EI ou une EURL.</td>
+            </tr>
+            <tr>
+                <td>SNC : Société en nom collectif</td>
+                <td>Société où les associés sont indéfiniment responsables des dettes sociales.</td>
+                <td>Composée de plusieurs associés solidaires.</td>
+                <td>Forte cohésion entre associés, structure adaptée aux activités familiales ou de confiance.</td>
+                <td>Responsabilité illimitée des associés sur leur patrimoine personnel.</td>
+            </tr>
+            <tr>
+                <td>Scop : Société coopérative de production</td>
+                <td>Entreprise coopérative où les salariés sont associés majoritaires.</td>
+                <td>Les salariés participent activement à la gestion et aux décisions.</td>
+                <td>Démocratie interne, partage équitable des bénéfices.</td>
+                <td>Peut manquer de capitaux, décisions parfois lentes à prendre collectivement.</td>
+            </tr>
+            <tr>
+                <td>Association</td>
+                <td>Organisation à but non lucratif, visant un objectif social, culturel ou éducatif.</td>
+                <td>Composée de membres bénévoles ou salariés, soumise à des statuts définis.</td>
+                <td>Fiscalité avantageuse, souplesse administrative pour les petites structures.</td>
+                <td>Limitée par son but non lucratif : pas de répartition des bénéfices entre les membres.</td>
+            </tr>
+        </tbody>
+    </table>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Managers -->
+        <section>
+            <h2>2.Que produit l'entreprise (des biens ou des services) ? lesquels ?:</h2>
+            <p>l'entreprise propose des prestation de services sur l'accompagnement à l'emploi.</p>
+            <p>L'accompagnement à l'emploi, c'est aider les personnes à trouver ou retrouver un travail. Cela passe par des conseils pour choisir 
+                un métier, des formations pour développer ses compétences, et un soutien pour préparer un CV ou un entretien. Il vise à rendre les candidats 
+                plus confiants et prêts pour le marché du travail. Ce sont souvent des organismes comme Pôle emploi, des associations ou des entreprises qui 
+                proposent cet accompagnement.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Psychologues -->
+        <section>
+            <h2>3. A quels types de clients s'adresse ces produits ou service ?:</h2>
+            <p>Ces produits s'adressent à des demendeur d'emplois.</p>
+            <p>Un demandeur d'emploi est une personne sans travail qui recherche activement un emploi. Cela peut inclure ceux qui n'ont jamais 
+                travaillé, qui ont perdu leur emploi ou qui souhaitent changer de poste. En général, ces personnes s'inscrivent auprès d'organismes comme Pôle 
+                emploi pour recevoir de l'aide et bénéficier de droits, comme des formations ou des allocations.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseiller en évolution professionnelle -->
+        <section>
+            <h2>4. Quels sont vos horraires ?</h2>
+            <p>je fais du 8h30-17h00</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>5. Y a-t-il des risques d'accidents dans l'entreprise ? :</h2>
+            <p>oui il peut y avoir des risques professionel liée à l'activité. </p>
+            <p>Voici les risques:</p>
+            <p>Perte de productivité, Accidents électriques, Stress collectif, Cyberattaques, Non-conformité légale.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>6. Quels sont les regles d'hygiene et de sécurité à respecter</h2>
+            <p>les reglesd'hygiène et de sécurité sont :</p>
+            <p>Poste de travail ergonomique, Pauses régulières, Organisation de l’espace, Éclairage adapté, Sécurité électrique, 
+               Formation et sensibilisation.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>7. Combien de personnes travaillent dans cette entreprise</h2>
+            <p>A la réunion il y a 76 salariés et dans tout le groupe inclue il y a plus de 1500 salraiés</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>8. Quels sont les métiers représenter ?</h2>
+            <p>Les métiers représentés sont :</p>
+            <p>- Directeur :  Responsable de la stratégie globale et du bon fonctionnement de l’organisation. Il prend les décisions majeures et supervise 
+               l’ensemble des activités.</p>
+            <p>- Manageurs (coordinateurs):Encadrent une équipe et coordonnent les actions pour atteindre les objectifs fixés, en assurant une bonne 
+               communication et répartition des tâches.</p>
+            <p>- Psychologues : Professionnels qui évaluent, accompagnent et soutiennent les individus dans leur bien-être mental, personnel ou professionnel.</p>
+            <p>- Conseillier en evolutioin professionnelle :Guide les individus dans leurs choix de carrière et formations, en les aidant à construire un 
+               projet professionnel adapté.</p>
+            <p>- Conseilliers en innsertion professionnelle :Aident les personnes à surmonter les obstacles à l’emploi, en leur proposant des outils, des 
+               formations ou des offres adaptées.</p>
+            <p>- Assistant de formation :Gère les aspects administratifs des formations (inscriptions, plannings, suivi), et veille à leur bon déroulement.</p>
+            <p>- Assistant de maintenance des locaux:Assure l’entretien, la réparation et la sécurité des équipements et infrastructures dans un bâtiment.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>9. Comment se nomme le métier étudier ?</h2>
+            <p>technicien supérieur système et réseau en formation devellopeur web application et serveurs.</p>
+        </section>
+
+        <!-- Section pour la question et la réponse sur le poste de Conseillers en insertion professionnelle -->
+        <section>
+            <h2>10. quels sont les activités principales du métier étudier ?</h2>
+            <p>Assure l’installation, la gestion et la sécurité des infrastructures réseau et systèmes informatiques, en garantissant leur bon fonctionnement ; Assure l’installation, la gestion et la sécurité des infrastructures réseau et systèmes informatiques, en garantissant leur bon fonctionnement.</p>
+        </section>
+
+    <main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>Page créée pour un rapport de stage.</p> <!-- Mention au bas de la page -->
+    </footer>
+</body>
+</html>
