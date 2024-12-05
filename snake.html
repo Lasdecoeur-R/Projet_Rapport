@@ -3,43 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions et Réponses</title>
+    <title>Jouer à Snake</title>
     <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Personnalisation des boutons si besoin */
-        .btn {
-            font-size: 18px;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/clouds.png'); /* Fond avec des dessins de nuages */
+            background-color: #87CEEB; /* Couleur du ciel */
+            color: #000;
+            margin: 0;
+            padding-top: 56px; /* Pour éviter que la navbar ne couvre le contenu */
         }
 
-        /* Styles personnalisés pour la barre de navigation */
         .navbar-custom {
-            background-color: #007bff; /* Couleur par défaut, modifiable */
+            background-color: #007bff;
         }
 
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
-            color: #fff; /* Couleur du texte de la navbar */
+            color: #fff;
         }
 
         .navbar-custom .nav-link:hover {
-            color: #d4d4d4; /* Couleur du texte au survol */
-        }
-
-        body {
-            font-family: Arial, sans-serif; /* Police d'écriture */
-            line-height: 1.6; /* Hauteur des lignes pour une meilleure lisibilité */
-            background-color: #f4f4f4; /* Couleur de fond gris clair */
-            color: #000000; /* Couleur du texte */
-            margin: 0; /* Suppression des marges par défaut */
-            padding-top: 56px; /* Espacement pour que la navbar ne couvre pas le contenu */
+            color: #d4d4d4;
         }
 
         h1 {
-            text-align: center; /* Centrer le titre */
-            color: #444; /* Couleur du texte */
-            font-size: 36px; /* Taille de la police */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+            text-align: center;
+            color: #444;
+            font-size: 36px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+        }
+
+        canvas {
+            border: 2px solid #333;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparence pour faire ressortir le fond nuageux */
+        }
+
+        .btn {
+            font-size: 18px;
             margin-top: 20px;
         }
 
@@ -51,21 +64,17 @@
             color: #333;
         }
 
-        section {
-            margin-bottom: 20px; /* Espacement entre les sections */
-            background: #fff; /* Fond blanc pour chaque section */
-            padding: 15px; /* Espacement interne autour du texte */
-            border-radius: 8px; /* Bords arrondis */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'effet de relief */
-        }
-
-        h2 {
-            color: #555; /* Couleur du texte */
+        .game-over-message {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
         }
     </style>
 </head>
 <body>
-
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
@@ -77,15 +86,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projets.html">Projets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="competences.html">Compétences</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tuteur.html">Tuteur</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Projet
@@ -96,100 +96,123 @@
                         <a class="dropdown-item" href="question_reponse.html">Voir les questions et réponses</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="competences.html">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tuteur.html">Tuteur</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- En-tête de la page -->
     <header>
-        <h1>Questions et Réponses</h1> <!-- Titre principal -->
+        <h1>Jouer à Snake</h1> <!-- Titre principal -->
     </header>
-    
+
     <!-- Contenu principal de la page -->
-    <main class="container mt-5">
-        <!-- Section pour chaque question et réponse -->
-        <section>
-            <h2>1. Cette entreprise est-elle une usine, un magasin ou un bureau ?</h2>
-            <p>L'entreprise dans laquelle je travaille est une association.</p>
-        </section>
-
-        <section>
-            <h2>2. Que produit l'entreprise (des biens ou des services) ? Lesquels ?</h2>
-            <p>L'entreprise propose des prestations de services sur l'accompagnement à l'emploi.</p>
-            <p>L'accompagnement à l'emploi, c'est aider les personnes à trouver ou retrouver un travail. Cela passe par des conseils pour choisir un métier, des formations pour développer ses compétences, et un soutien pour préparer un CV ou un entretien. Il vise à rendre les candidats plus confiants et prêts pour le marché du travail. Ce sont souvent des organismes comme Pôle emploi, des associations ou des entreprises qui proposent cet accompagnement.</p>
-        </section>
-        
-        <section>
-            <h2>3. A quels types de clients s'adresse ces produits ou services ?</h2>
-            <p>Ces produits s'adressent à des demandeurs d'emplois.</p>
-            <p>Un demandeur d'emploi est une personne sans travail qui recherche activement un emploi. Cela peut inclure ceux qui n'ont jamais travaillé, qui ont perdu leur emploi ou qui souhaitent changer de poste. En général, ces personnes s'inscrivent auprès d'organismes comme Pôle emploi pour recevoir de l'aide et bénéficier de droits, comme des formations ou des allocations.</p>
-        </section>
-
-        <section>
-            <h2>4. Quels sont vos horaires ?</h2>
-            <p>Je fais du 8h30-17h00.</p>
-        </section>
-
-        <section>
-            <h2>5. Y a-t-il des risques d'accidents dans l'entreprise ?</h2>
-            <p>Oui, il peut y avoir des risques professionnels liés à l'activité.</p>
-            <p>Voici les risques :</p>
-            <ul>
-                <li>Perte de productivité</li>
-                <li>Accidents électriques</li>
-                <li>Stress collectif</li>
-                <li>Cyberattaques</li>
-                <li>Non-conformité légale</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>6. Quels sont les règles d'hygiène et de sécurité à respecter ?</h2>
-            <p>Les règles d'hygiène et de sécurité sont :</p>
-            <ul>
-                <li>Poste de travail ergonomique</li>
-                <li>Pauses régulières</li>
-                <li>Organisation de l’espace</li>
-                <li>Éclairage adapté</li>
-                <li>Sécurité électrique</li>
-                <li>Formation et sensibilisation</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>7. Combien de personnes travaillent dans cette entreprise ?</h2>
-            <p>À la Réunion, il y a 76 salariés et dans tout le groupe inclus, il y a plus de 1500 salariés.</p>
-        </section>
-
-        <section>
-            <h2>8. Quels sont les métiers représentés ?</h2>
-            <p>Les métiers représentés sont :</p>
-            <ul>
-                <li><strong>Directeur :</strong> Responsable de la stratégie globale et du bon fonctionnement de l’organisation. Il prend les décisions majeures et supervise l’ensemble des activités.</li>
-                <li><strong>Managers (coordinateurs) :</strong> Encadrent une équipe et coordonnent les actions pour atteindre les objectifs fixés, en assurant une bonne communication et répartition des tâches.</li>
-                <li><strong>Psychologues :</strong> Professionnels qui évaluent, accompagnent et soutiennent les individus dans leur bien-être mental, personnel ou professionnel.</li>
-                <li><strong>Conseiller en évolution professionnelle :</strong> Guide les individus dans leurs choix de carrière et formations, en les aidant à construire un projet professionnel adapté.</li>
-                <li><strong>Conseillers en insertion professionnelle :</strong> Aident les personnes à surmonter les obstacles à l’emploi, en leur proposant des outils, des formations ou des offres adaptées.</li>
-                <li><strong>Assistant de formation :</strong> Gère les aspects administratifs des formations (inscriptions, plannings, suivi), et veille à leur bon déroulement.</li>
-                <li><strong>Assistant de maintenance des locaux :</strong> Assure l’entretien, la réparation et la sécurité des équipements et infrastructures dans un bâtiment.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>9. Comment se nomme le métier étudié ?</h2>
-            <p>Technicien supérieur système et réseau en formation développeur web application et serveurs.</p>
-        </section>
-
-        <section>
-            <h2>10. Quelles sont les activités principales du métier étudié ?</h2>
-            <p>Assure l’installation, la gestion et la sécurité des infrastructures réseau et systèmes informatiques, en garantissant leur bon fonctionnement ; Assure l’installation, la gestion et la sécurité des infrastructures réseau et systèmes informatiques, en garantissant leur bon fonctionnement.</p>
-        </section>
+    <main class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <button id="startButton" class="btn btn-primary">Démarrer le jeu</button>
+        <div id="gameOverMessage" class="game-over-message">Game Over!</div>
     </main>
 
     <!-- Pied de page -->
     <footer class="bg-light text-center text-lg-start mt-5 p-3">
         &copy; 2023 Alexy's Internship Project. Tous droits réservés.
     </footer>
+
+    <!-- Scripts pour le jeu Snake -->
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        const startButton = document.getElementById("startButton");
+        const gameOverMessage = document.getElementById("gameOverMessage");
+
+        let snake = [{ x: 200, y: 200 }];
+        let direction = "RIGHT";
+        let food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
+        let gameInterval;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Dessiner le serpent avec des segments ovales
+            snake.forEach(part => {
+                ctx.fillStyle = "green";
+                ctx.beginPath();
+                ctx.ellipse(part.x + 10, part.y + 10, 15, 10, 0, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.strokeStyle = "darkgreen";
+                ctx.stroke();
+            });
+
+            // Dessiner la nourriture
+            ctx.fillStyle = "red";
+            ctx.fillRect(food.x, food.y, 20, 20);
+        }
+
+        function moveSnake() {
+            const head = { x: snake[0].x, y: snake[0].y };
+
+            if (direction === "UP") head.y -= 20;
+            if (direction === "DOWN") head.y += 20;
+            if (direction === "LEFT") head.x -= 20;
+            if (direction === "RIGHT") head.x += 20;
+
+            snake.unshift(head);
+
+            // Si le serpent mange la nourriture
+            if (head.x === food.x && head.y === food.y) {
+                food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
+            } else {
+                snake.pop();
+            }
+
+            // Fin du jeu si le serpent touche les bords ou lui-même
+            if (
+                head.x < 0 || head.x >= canvas.width ||
+                head.y < 0 || head.y >= canvas.height ||
+                snake.slice(1).some(part => part.x === head.x && part.y === head.y)
+            ) {
+                clearInterval(gameInterval);
+                gameOverMessage.style.display = 'block';
+                return;
+            }
+        }
+
+        function changeDirection(event) {
+            const keyPressed = event.keyCode;
+            if (keyPressed === 37 && direction !== "RIGHT") {
+                direction = "LEFT";
+            } else if (keyPressed === 38 && direction !== "DOWN") {
+                direction = "UP";
+            } else if (keyPressed === 39 && direction !== "LEFT") {
+                direction = "RIGHT";
+            } else if (keyPressed === 40 && direction !== "UP") {
+                direction = "DOWN";
+            }
+        }
+
+        function resetGame() {
+            snake = [{ x: 200, y: 200 }];
+            direction = "RIGHT";
+            food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
+            gameOverMessage.style.display = 'none';
+        }
+
+        function startGame() {
+            resetGame();
+            gameInterval = setInterval(() => {
+                moveSnake();
+                draw();
+            }, 200);
+        }
+
+        document.addEventListener("keydown", changeDirection);
+        startButton.addEventListener("click", startGame);
+    </script>
 
     <!-- Bootstrap JS et Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

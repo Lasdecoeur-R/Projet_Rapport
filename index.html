@@ -7,23 +7,38 @@
     <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Personnalisation des boutons si besoin */
-        .btn {
-            font-size: 18px;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #000;
+            margin: 0;
+            padding-top: 70px; /* Pour éviter que la navbar couvre le contenu */
         }
-
-        /* Styles personnalisés pour la barre de navigation */
+    
         .navbar-custom {
-            background-color: #007bff; /* Couleur par défaut, modifiable */
+            background-color: #007bff; /* Couleur de fond de la navbar */
         }
-
+    
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
             color: #fff; /* Couleur du texte de la navbar */
         }
-
+    
         .navbar-custom .nav-link:hover {
             color: #d4d4d4; /* Couleur du texte au survol */
+        }
+    
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 36px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .lead {
+            color: #666;
         }
 
         footer {
@@ -33,12 +48,20 @@
             text-align: center;
             color: #333;
         }
-    </style>
+    
+        .btn {
+            font-size: 18px;
+        }
+
+        .container {
+            padding-bottom: 30px; /* Ajoute un espace sous le texte principal */
+        }
+    </style>    
 </head>
 <body>
 
     <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
