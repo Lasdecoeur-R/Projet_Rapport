@@ -1,159 +1,261 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Déclaration du document HTML avec spécification de la langue en français -->
     <meta charset="UTF-8">
-    <!-- Encodage des caractères en UTF-8 pour gérer les accents et caractères spéciaux -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titre de la page affiché dans l'onglet du navigateur -->
     <title>Résumé des composants et périphériques</title>
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Style général du corps de la page */
+        /* Personnalisation des boutons si besoin */
+        .btn {
+            font-size: 18px;
+        }
+
+        /* Styles personnalisés pour la barre de navigation */
+        .navbar-custom {
+            background-color: #007bff; /* Couleur par défaut, modifiable */
+        }
+
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .nav-link {
+            color: #fff; /* Couleur du texte de la navbar */
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #d4d4d4; /* Couleur du texte au survol */
+        }
+
         body {
             font-family: Arial, sans-serif; /* Police d'écriture */
             line-height: 1.6; /* Hauteur des lignes pour une meilleure lisibilité */
             background-color: #f4f4f4; /* Couleur de fond gris clair */
             color: #000000; /* Couleur du texte */
             margin: 0; /* Suppression des marges par défaut */
-            padding: 20px; /* Espacement interne autour du contenu */
+            padding-top: 56px; /* Espacement pour que la navbar ne couvre pas le contenu */
         }
-        /* Style du titre principal */
+
         h1 {
             text-align: center; /* Centrer le titre */
             color: #444; /* Couleur du texte */
             font-size: 36px; /* Taille de la police */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
-        }
-        /* Style des sections contenant chaque résumé */
-        section {
-            margin-bottom: 20px; /* Espacement entre les sections */
-            background: #fff; /* Fond blanc pour chaque section */
-            padding: 15px; /* Espacement interne autour du texte */
-            border-radius: 8px; /* Bords arrondis */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'effet de relief */
-        }
-        /* Style des titres secondaires (noms des composants) */
-        h2 {
-            color: #555; /* Couleur du texte */
-        }
-        /* Style du bouton de redirection */
-        .btn {
-            display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff; /* Couleur de fond bleu */
-            color: white; /* Couleur du texte */
-            border: none; /* Suppression des bordures */
-            border-radius: 5px; /* Coins arrondis */
-            text-decoration: none; /* Suppression du soulignement */
-            text-align: center; /* Centrer le texte */
-            cursor: pointer; /* Curseur de pointeur */
         }
-        .btn:hover {
-            background-color: #0056b3; /* Changement de couleur au survol */
+
+        footer {
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            color: #333;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <!-- Bouton pour rediriger vers index.html -->
-    <a href="index.html" class="btn">Retour à l'accueil</a>
-    <!-- Bouton pour rediriger vers index.html -->
-    <a href="snake.html" class="btn">jouer à snake</a>
-    <!-- Bouton pour rediriger vers la page des questions_reponses -->
-    <a href="question_reponse.html" class="btn">Voir les questions et les réponses</a>
-    
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <a class="navbar-brand" href="index.html">Rapport de Stage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projets.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="competences.html">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tuteur.html">Tuteur</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="composant.html">Voir les composants</a>
+                        <a class="dropdown-item" href="snake.html">Jouer à Snake</a>
+                        <a class="dropdown-item" href="question_reponse.html">Voir les questions et réponses</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Titre principal de la page -->
-        <h1>Résumé des composants et périphériques</h1>
-    
-        <!-- Section pour chaque composant ou périphérique -->
-        <section>
-            <!-- Titre du composant -->
-            <h2>Carte mère</h2>
-            <!-- Résumé du composant -->
-            <p>Composant central qui connecte et permet la communication entre le processeur, la mémoire et les périphériques. Elle gère les connexions réseau, les ports USB et les autres composants.</p>
-        </section>
-    
-        <section>
-            <h2>Processeur (UCT)</h2>
-            <p>Centre de contrôle de l'ordinateur qui exécute les instructions et gère les calculs nécessaires au fonctionnement des logiciels et applications.</p>
-        </section>
-    
-        <section>
-            <h2>Mémoire vive (RAM)</h2>
-            <p>Mémoire temporaire et volatile qui stocke les données en cours d'utilisation, supprimées lorsque l'ordinateur est éteint.</p>
-        </section>
-    
-        <section>
-            <h2>Disque de stockage (HDD/SSD)</h2>
-            <p>Dispositifs de stockage permanents : les SSD utilisent la mémoire flash pour plus de rapidité, tandis que les HDD stockent sur des disques magnétiques.</p>
-        </section>
-    
-        <section>
-            <h2>Processeur graphique (GPU)</h2>
-            <p>Puce dédiée au traitement graphique, optimisant les rendus d'images, vidéos et affichages 3D.</p>
-        </section>
-    
-        <section>
-            <h2>Clavier</h2>
-            <p>Interface d'entrée permettant à l'utilisateur de saisir des données textuelles et d'interagir avec le système.</p>
-        </section>
-    
-        <section>
-            <h2>Souris</h2>
-            <p>Dispositif de pointage pour contrôler le curseur et sélectionner des objets à l'écran.</p>
-        </section>
-    
-        <section>
-            <h2>Écran (moniteur)</h2>
-            <p>Périphérique de sortie qui affiche les images générées par la carte graphique via des connecteurs tels que HDMI ou DisplayPort.</p>
-        </section>
-    
-        <section>
-            <h2>Imprimante</h2>
-            <p>Périphérique de sortie qui transfère texte et images d'un ordinateur vers du papier.</p>
-        </section>
-    
-        <section>
-            <h2>Haut-parleur</h2>
-            <p>Dispositif audio qui convertit les signaux électriques en sons audibles.</p>
-        </section>
-    
-        <section>
-            <h2>Graveur de CD/DVD</h2>
-            <p>Périphérique permettant d'écrire des données sur des CD ou DVD, avec ou sans option de réécriture.</p>
-        </section>
-    
-        <section>
-            <h2>Lecteur de CD/DVD</h2>
-            <p>Périphérique utilisé pour lire les données sur des CD ou DVD.</p>
-        </section>
-    
-        <section>
-            <h2>Scanner</h2>
-            <p>Périphérique qui numérise des documents physiques en fichiers numériques.</p>
-        </section>
-    
-        <section>
-            <h2>Micro</h2>
-            <p>Périphérique audio qui capture les sons, comme les voix, pour les transmettre ou les enregistrer.</p>
-        </section>
-    
-        <section>
-            <h2>Webcam</h2>
-            <p>Caméra utilisée pour capturer des vidéos en direct, souvent pour des communications en ligne.</p>
-        </section>
-    
-        <section>
-            <h2>Manette de jeu</h2>
-            <p>Dispositif d'entrée portatif pour contrôler des mouvements et actions dans les jeux vidéo.</p>
-        </section>
-    
-        <!-- Bouton pour rediriger vers index.html -->
-    <a href="index.html" class="btn">Retour à l'accueil</a>
-    <!-- Bouton pour rediriger vers index.html -->
-    <a href="snake.html" class="btn">jouer à snake</a>
-    <!-- Bouton pour rediriger vers la page des questions_reponses -->
-    <a href="question_reponse.html" class="btn">Voir les questions et les réponses</a>
+    <h1>Résumé des composants et périphériques</h1>
+
+    <!-- Contenu principal avec des cartes Bootstrap pour chaque composant -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/carte_mère.jpg" alt="Carte mère">
+                        <h2 class="card-title">Carte mère</h2>
+                        <p class="card-text">Composant central qui connecte et permet la communication entre le processeur, la mémoire et les périphériques. Elle gère les connexions réseau, les ports USB et les autres composants.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/processeur.jpg" alt="Processeur">
+                        <h2 class="card-title">Processeur (UCT)</h2>
+                        <p class="card-text">Centre de contrôle de l'ordinateur qui exécute les instructions et gère les calculs nécessaires au fonctionnement des logiciels et applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/ram.jpg" alt="Mémoire vive">
+                        <h2 class="card-title">Mémoire vive (RAM)</h2>
+                        <p class="card-text">Mémoire temporaire et volatile qui stocke les données en cours d'utilisation, supprimées lorsque l'ordinateur est éteint.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/HDD.jpg" alt="Disque de stockage">
+                        <h2 class="card-title">Disque de stockage (HDD/SSD)</h2>
+                        <p class="card-text">Dispositifs de stockage permanents : les SSD utilisent la mémoire flash pour plus de rapidité, tandis que les HDD stockent sur des disques magnétiques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/gpu.jpg" alt="Processeur graphique">
+                        <h2 class="card-title">Processeur graphique (GPU)</h2>
+                        <p class="card-text">Puce dédiée au traitement graphique, optimisant les rendus d'images, vidéos et affichages 3D.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/clavier.jpg" alt="Clavier">
+                        <h2 class="card-title">Clavier</h2>
+                        <p class="card-text">Interface d'entrée permettant à l'utilisateur de saisir des données textuelles et d'interagir avec le système.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/souris.jpg" alt="Souris">
+                        <h2 class="card-title">Souris</h2>
+                        <p class="card-text">Dispositif de pointage pour contrôler le curseur et sélectionner des objets à l'écran.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/écran.jpg" alt="Écran">
+                        <h2 class="card-title">Écran (moniteur)</h2>
+                        <p class="card-text">Périphérique de sortie qui affiche les images générées par la carte graphique via des connecteurs tels que HDMI ou DisplayPort.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/imprimante.jpg" alt="Imprimante">
+                        <h2 class="card-title">Imprimante</h2>
+                        <p class="card-text">Périphérique de sortie qui transfère texte et images d'un ordinateur vers du papier.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/haut_parleur.jpg" alt="Haut-parleur">
+                        <h2 class="card-title">Haut-parleur</h2>
+                        <p class="card-text">Dispositif audio qui convertit les signaux électriques en sons audibles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/lecteur_graveur_CD_DVD.jpg" alt="Graveur de CD/DVD">
+                        <h2 class="card-title">Graveur de CD/DVD</h2>
+                        <p class="card-text">Périphérique permettant d'écrire des données sur des CD ou DVD, avec ou sans option de réécriture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/lecteur_graveur_CD_DVD.jpg" alt="Lecteur de CD/DVD">
+                        <h2 class="card-title">Lecteur de CD/DVD</h2>
+                        <p class="card-text">Périphérique utilisé pour lire les données sur des CD ou DVD.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/scanner.jpg" alt="Scanner">
+                        <h2 class="card-title">Scanner</h2>
+                        <p class="card-text">Périphérique qui numérise des documents physiques en fichiers numériques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/micro.jpg" alt="Micro">
+                        <h2 class="card-title">Micro</h2>
+                        <p class="card-text">Périphérique audio qui capture les sons, comme les voix, pour les transmettre ou les enregistrer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/webcam.jpg" alt="Webcam">
+                        <h2 class="card-title">Webcam</h2>
+                        <p class="card-text">Caméra utilisée pour capturer des vidéos en direct, souvent pour des communications en ligne.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="docs/images/projets/manette_de_jeu.jpg" alt="Manette de jeu">
+                        <h2 class="card-title">Manette de jeu</h2>
+                        <p class="card-text">Dispositif d'entrée portatif pour contrôler des mouvements et actions dans les jeux vidéo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="bg-light text-center text-lg-start mt-5 p-3">
+        &copy; 2023 Alexy's Internship Project. Tous droits réservés.
+    </footer>
+
+    <!-- Bootstrap JS et Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
