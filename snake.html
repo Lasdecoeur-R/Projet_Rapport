@@ -14,7 +14,7 @@
             background-color: #87CEEB; /* Couleur du ciel */
             color: #000;
             margin: 0;
-            padding-top: 56px; /* Pour éviter que la navbar ne couvre le contenu */
+            padding-top: 70px; /* Pour éviter que la navbar ne couvre le contenu */
         }
 
         .navbar-custom {
@@ -72,6 +72,30 @@
             margin-top: 20px;
             display: none;
         }
+
+        .score-message {
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                border: none;
+            }
+            .navbar-toggler-icon {
+                background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Petit logo pour le menu déroulant */
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .btn {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,6 +118,7 @@
                         <a class="dropdown-item" href="composant.html">Voir les composants</a>
                         <a class="dropdown-item" href="snake.html">Jouer à Snake</a>
                         <a class="dropdown-item" href="question_reponse.html">Voir les questions et réponses</a>
+                        <a class="dropdown-item" href="projets_technique.html">Projets techniques</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -116,6 +141,7 @@
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <button id="startButton" class="btn btn-primary">Démarrer le jeu</button>
         <div id="gameOverMessage" class="game-over-message">Game Over!</div>
+        <div id="scoreMessage" class="score-message">Votre score: <span id="finalScore">0</span></div>
     </main>
 
     <!-- Pied de page -->
@@ -129,11 +155,14 @@
         const ctx = canvas.getContext("2d");
         const startButton = document.getElementById("startButton");
         const gameOverMessage = document.getElementById("gameOverMessage");
+        const scoreMessage = document.getElementById("scoreMessage");
+        const finalScore = document.getElementById("finalScore");
 
         let snake = [{ x: 200, y: 200 }];
         let direction = "RIGHT";
         let food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
         let gameInterval;
+        let score = 0;
 
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -165,6 +194,7 @@
 
             // Si le serpent mange la nourriture
             if (head.x === food.x && head.y === food.y) {
+                score++;
                 food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
             } else {
                 snake.pop();
@@ -178,6 +208,8 @@
             ) {
                 clearInterval(gameInterval);
                 gameOverMessage.style.display = 'block';
+                finalScore.textContent = score;
+                scoreMessage.style.display = 'block';
                 return;
             }
         }
@@ -199,7 +231,9 @@
             snake = [{ x: 200, y: 200 }];
             direction = "RIGHT";
             food = { x: Math.floor(Math.random() * 20) * 20, y: Math.floor(Math.random() * 20) * 20 };
+            score = 0;
             gameOverMessage.style.display = 'none';
+            scoreMessage.style.display = 'none';
         }
 
         function startGame() {

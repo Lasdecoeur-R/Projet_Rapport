@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences</title>
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #000;
+            margin: 0;
+            padding-top: 56px; /* Pour éviter que la navbar ne couvre le contenu */
+        }
+
+        .navbar-custom {
+            background-color: #007bff;
+        }
+
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .nav-link {
+            color: #fff;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #d4d4d4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 36px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .competences-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .competence-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .competence-section h2 {
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .competence-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .competence-section ul li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .competence-section ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .competences-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <a class="navbar-brand" href="index.html">Rapport de Stage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="menu-icon"> <!-- Icône de menu déroulant -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="composant.html">Voir les composants</a>
+                        <a class="dropdown-item" href="snake.html">Jouer à Snake</a>
+                        <a class="dropdown-item" href="question_reponse.html">Voir les questions et réponses</a>
+                        <a class="dropdown-item" href="projets_technique.html">Projets techniques</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="competences.html">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tuteur.html">Tuteur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <header>
+        <h1>Compétences</h1> <!-- Titre principal -->
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main class="competences-container container">
+        <!-- Compétences Sociables et Comportementales -->
+        <div class="competence-section">
+            <h2>Compétences Sociables et Comportementales</h2>
+            <ul>
+                <li><strong>Adaptation au Milieu Professionnel :</strong> Capacité d’adaptation rapide aux exigences et aux règles de vie en entreprise, incluant une bonne compréhension des valeurs et normes professionnelles.</li>
+                <li><strong>Comportement Professionnel :</strong> Attitude positive et respectueuse dans le milieu de travail, respect des délais, et engagement à suivre les directives.</li>
+                <li><strong>Communication :</strong> Bonne communication avec les collègues, facilitant les échanges d’informations et la collaboration dans la réalisation des projets.</li>
+                <li><strong>Travail d'Équipe :</strong> Intégration rapide et participation active au sein des équipes, apportant une contribution positive au travail collectif.</li>
+                <li><strong>Compréhension Organisationnelle :</strong> Compréhension de la structure organisationnelle et des rôles au sein de l’entreprise, permettant une meilleure coordination et exécution des tâches.</li>
+            </ul>
+        </div>
+
+        <!-- Compétences Techniques -->
+        <div class="competence-section">
+            <h2>Compétences Techniques</h2>
+            <ul>
+                <li><strong>Développement Web :</strong> Création de sites internet en utilisant HTML et CSS, avec des compétences de base en conception d'interfaces simples et ergonomiques.</li>
+                <li><strong>Lecture et Débogage de Code :</strong> Capacité à lire, comprendre et analyser des lignes de code pour identifier et résoudre des problèmes techniques.</li>
+                <li><strong>Connaissance Matérielle :</strong> Bonne compréhension des composants d'un ordinateur (unité centrale, périphériques) et leur fonctionnement.</li>
+                <li><strong>Support et Déploiement Informatique :</strong> Installation et configuration de matériel informatique (ordinateurs, téléphones) pour des utilisateurs finaux, incluant des nouveaux arrivants.</li>
+                <li><strong>Réseau et Diagnostic :</strong> Capacité à effectuer un ping, diagnostiquer la connectivité réseau, et lire des mappages réseau pour vérifier l'accessibilité des ressources.</li>
+                <li><strong>Formation Systèmes et Réseaux :</strong> Expérience en tant que Technicien Supérieur Système et Réseau, avec des compétences de base en administration réseau.</li>
+                <li><strong>Formation Développement Web :</strong> Connaissances en développement web incluant les applications, les serveurs, et la mise en ligne de services.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-light text-center text-lg-start mt-5 p-3">
+        &copy; 2023 Alexy's Internship Project. Tous droits réservés.
+    </footer>
+
+    <!-- Bootstrap JS et Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
