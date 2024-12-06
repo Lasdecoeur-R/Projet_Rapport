@@ -1,45 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapport de Stage - Accueil</title>
-    <!-- Intégration de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             background-color: #f4f4f4;
             color: #000;
-            margin: 0;
-            padding-top: 70px; /* Pour éviter que la navbar couvre le contenu */
+            padding-top: 70px; 
         }
-    
+
         .navbar-custom {
-            background-color: #007bff; /* Couleur de fond de la navbar remise en bleu */
+            background-color: #007bff;
         }
-    
+
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
-            color: #fff; /* Couleur du texte de la navbar en blanc */
+            color: #fff;
         }
-    
+
         .navbar-custom .nav-link:hover {
-            color: #d4d4d4; /* Couleur du texte au survol */
-        }
-
-        /* Modification de l'icône de la navbar en blanc */
-        .navbar-toggler {
-            border: none; /* Supprimer la bordure autour du bouton */
-        }
-
-        .navbar-toggler-icon {
-            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Icône hamburger en blanc */
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 30px; /* Largeur de l'icône */
-            height: 30px; /* Hauteur de l'icône */
+            color: #d4d4d4;
         }
 
         h1 {
@@ -47,11 +31,15 @@
             color: #444;
             font-size: 36px;
             margin-top: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .lead {
-            color: #666;
+        .container {
+            padding-bottom: 30px;
+        }
+
+        .card {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -59,32 +47,8 @@
             padding: 10px 0;
             background-color: #f8f9fa;
             text-align: center;
-            color: #333;
         }
-    
-        .btn {
-            font-size: 18px;
-        }
-
-        .container {
-            padding-bottom: 30px; /* Ajoute un espace sous le texte principal */
-        }
-
-        /* Styles pour rendre le site plus responsive */
-        @media (max-width: 768px) {
-            .navbar-toggler {
-                border: none;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .lead {
-                font-size: 16px;
-            }
-        }
-    </style>    
+    </style>
 </head>
 <body>
 
@@ -92,7 +56,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <!-- Icône de menu hamburger -->
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -121,20 +85,54 @@
     </nav>
 
     <!-- Contenu principal -->
-    <div class="container text-center mt-5">
-        <h1 class="display-4">Bienvenue sur le Rapport de Stage</h1> <!-- Titre principal de la page d'accueil -->
-        <p class="lead">Ce site est conçu pour présenter l'ensemble des travaux réalisés durant mon stage, les compétences acquises ainsi que mon tuteur de stage.</p> <!-- Texte introductif expliquant l'objectif du site -->
-        <p>Vous trouverez dans les sections ci-dessus toutes les informations relatives aux projets auxquels j'ai participé, aux compétences développées, et aux détails concernant mon tuteur.</p> <!-- Informations supplémentaires -->
+    <div class="container mt-5">
+        <h1 class="display-4">Bienvenue sur mon Rapport de Stage</h1>
+        <p class="lead">Découvrez les travaux réalisés, les compétences acquises et les projets sur lesquels j'ai travaillé pendant mon stage.</p>
+
+        <!-- Section Actualités -->
+        <section>
+            <h2>Actualités et Nouveautés</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Nouveau Jeu : Snake</h5>
+                    <p class="card-text">Découvrez un jeu classique ajouté à notre site. Cliquez sur le lien dans la section "Projet" pour y accéder.</p>
+                    <a href="snake.html" class="btn btn-primary">Découvrir</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Nouvelles Compétences Ajoutées</h5>
+                    <p class="card-text">Explorez les nouvelles compétences techniques et professionnelles acquises récemment.</p>
+                    <a href="competences.html" class="btn btn-primary">Voir les compétences</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Raccourcis -->
+        <section class="mt-5">
+            <h2>Raccourcis vers les sections principales</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="composant.html" class="btn btn-outline-primary btn-block">Composants</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="projets_technique.html" class="btn btn-outline-primary btn-block">Projets Techniques</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="question_reponse.html" class="btn btn-outline-primary btn-block">Questions & Réponses</a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Pied de page -->
-    <footer class="bg-light text-center text-lg-start mt-5 p-3">
-        &copy; 2023 Alexy's Internship Project. Tous droits réservés. <!-- Texte de copyright -->
+    <footer>
+        &copy; 2023 Alexy's Internship Project. Tous droits réservés.
     </footer>
 
-    <!-- Bootstrap JS et Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Librairie jQuery, nécessaire pour certaines fonctionnalités de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> <!-- Popper.js pour le positionnement des éléments flottants, nécessaire pour Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- JavaScript Bootstrap pour le fonctionnement de la navbar et des autres composants -->
+    <!-- Scripts JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
