@@ -26,6 +26,15 @@
             color: #d4d4d4; /* Couleur du texte au survol */
         }
 
+        body {
+            font-family: Arial, sans-serif; /* Police d'écriture */
+            line-height: 1.6; /* Hauteur des lignes pour une meilleure lisibilité */
+            background-color: #f4f4f4; /* Couleur de fond gris clair */
+            color: #000000; /* Couleur du texte */
+            margin: 0; /* Suppression des marges par défaut */
+            padding-top: 100px; /* Espacement pour que la navbar ne couvre pas le contenu */
+        }
+
         h1 {
             text-align: center; /* Centrer le titre */
             color: #444; /* Couleur du texte */
@@ -48,6 +57,13 @@
             margin-bottom: 15px;
             border-radius: 5px;
         }
+
+        @media (max-width: 768px) {
+            /* Ajustements pour écrans plus petits */
+            body {
+                padding-top: 120px; /* Augmenter le padding pour tenir compte de la barre de navigation repliée */
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,7 +72,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <img src="docs/images/menu-icon.png" alt="Menu" width="30" height="30"> <!-- Icône de menu personnalisée -->
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -86,8 +104,8 @@
 
     <!-- Titre principal de la page -->
     <h1>Résumé des composants et périphériques</h1>
-    
- <!-- Contenu principal avec des cartes Bootstrap pour chaque composant -->
+
+    <!-- Contenu principal avec des cartes Bootstrap pour chaque composant -->
  <div class="container mt-5">
     <div class="row">
         <div class="col-md-4 mb-4">
