@@ -17,18 +17,31 @@
         }
     
         .navbar-custom {
-            background-color: #007bff; /* Couleur de fond de la navbar */
+            background-color: #007bff; /* Couleur de fond de la navbar remise en bleu */
         }
     
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
-            color: #fff; /* Couleur du texte de la navbar */
+            color: #fff; /* Couleur du texte de la navbar en blanc */
         }
     
         .navbar-custom .nav-link:hover {
             color: #d4d4d4; /* Couleur du texte au survol */
         }
-    
+
+        /* Modification de l'icône de la navbar en blanc */
+        .navbar-toggler {
+            border: none; /* Supprimer la bordure autour du bouton */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Icône hamburger en blanc */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px; /* Largeur de l'icône */
+            height: 30px; /* Hauteur de l'icône */
+        }
+
         h1 {
             text-align: center;
             color: #444;
@@ -59,12 +72,8 @@
 
         /* Styles pour rendre le site plus responsive */
         @media (max-width: 768px) {
-            .navbar-custom .navbar-toggler-icon {
-                background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg');
-                background-size: contain;
-                background-repeat: no-repeat;
-                width: 30px;
-                height: 30px;
+            .navbar-toggler {
+                border: none;
             }
 
             h1 {
@@ -83,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span> <!-- Icône de menu hamburger -->
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -113,19 +122,19 @@
 
     <!-- Contenu principal -->
     <div class="container text-center mt-5">
-        <h1 class="display-4">Bienvenue sur le Rapport de Stage</h1>
-        <p class="lead">Ce site est conçu pour présenter l'ensemble des travaux réalisés durant mon stage, les compétences acquises ainsi que mon tuteur de stage.</p>
-        <p>Vous trouverez dans les sections ci-dessus toutes les informations relatives aux projets auxquels j'ai participé, aux compétences développées, et aux détails concernant mon tuteur.</p>
+        <h1 class="display-4">Bienvenue sur le Rapport de Stage</h1> <!-- Titre principal de la page d'accueil -->
+        <p class="lead">Ce site est conçu pour présenter l'ensemble des travaux réalisés durant mon stage, les compétences acquises ainsi que mon tuteur de stage.</p> <!-- Texte introductif expliquant l'objectif du site -->
+        <p>Vous trouverez dans les sections ci-dessus toutes les informations relatives aux projets auxquels j'ai participé, aux compétences développées, et aux détails concernant mon tuteur.</p> <!-- Informations supplémentaires -->
     </div>
 
     <!-- Pied de page -->
     <footer class="bg-light text-center text-lg-start mt-5 p-3">
-        &copy; 2023 Alexy's Internship Project. Tous droits réservés.
+        &copy; 2023 Alexy's Internship Project. Tous droits réservés. <!-- Texte de copyright -->
     </footer>
 
     <!-- Bootstrap JS et Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Librairie jQuery, nécessaire pour certaines fonctionnalités de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> <!-- Popper.js pour le positionnement des éléments flottants, nécessaire pour Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- JavaScript Bootstrap pour le fonctionnement de la navbar et des autres composants -->
 </body>
 </html>

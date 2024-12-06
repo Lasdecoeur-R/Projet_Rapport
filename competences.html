@@ -17,16 +17,29 @@
         }
 
         .navbar-custom {
-            background-color: #007bff;
+            background-color: #007bff; /* Couleur de fond de la navbar */
         }
 
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
-            color: #fff;
+            color: #fff; /* Couleur du texte de la navbar */
         }
 
         .navbar-custom .nav-link:hover {
-            color: #d4d4d4;
+            color: #d4d4d4; /* Couleur du texte au survol */
+        }
+
+        /* Modification de l'icône de la navbar en blanc pour la version mobile */
+        .navbar-toggler {
+            border: none; /* Supprimer la bordure autour du bouton */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Icône hamburger en blanc */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px; /* Largeur de l'icône */
+            height: 30px; /* Hauteur de l'icône */
         }
 
         h1 {
@@ -102,8 +115,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="menu-icon"> <!-- Icône de menu déroulant -->
+            <span class="navbar-toggler-icon"></span> <!-- Icône de menu hamburger blanche -->
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">

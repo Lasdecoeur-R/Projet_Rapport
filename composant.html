@@ -26,6 +26,19 @@
             color: #d4d4d4; /* Couleur du texte au survol */
         }
 
+        /* Modification de l'icône de la navbar en blanc pour la version mobile */
+        .navbar-toggler {
+            border: none; /* Supprimer la bordure autour du bouton */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Icône hamburger en blanc */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px; /* Largeur de l'icône */
+            height: 30px; /* Hauteur de l'icône */
+        }
+
         body {
             font-family: Arial, sans-serif; /* Police d'écriture */
             line-height: 1.6; /* Hauteur des lignes pour une meilleure lisibilité */
@@ -72,9 +85,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <img src="docs/images/menu-icon.png" alt="Menu" width="30" height="30"> <!-- Icône de menu personnalisée -->
-            </span>
+            <span class="navbar-toggler-icon"></span> <!-- Icône de menu hamburger blanche -->
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -105,7 +116,7 @@
     <!-- Titre principal de la page -->
     <h1>Résumé des composants et périphériques</h1>
 
-    <!-- Contenu principal avec des cartes Bootstrap pour chaque composant -->
+     <!-- Contenu principal avec des cartes Bootstrap pour chaque composant -->
  <div class="container mt-5">
     <div class="row">
         <div class="col-md-4 mb-4">

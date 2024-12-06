@@ -32,7 +32,7 @@
             background-color: #f4f4f4; /* Couleur de fond gris clair */
             color: #000000; /* Couleur du texte */
             margin: 0; /* Suppression des marges par défaut */
-            padding-top: 70px; /* Espacement pour que la navbar ne couvre pas le contenu */
+            padding-top: 100px; /* Espacement pour que la navbar ne couvre pas le contenu */
         }
 
         h1 {
@@ -51,21 +51,11 @@
             color: #333;
         }
 
-        section {
-            margin-bottom: 20px; /* Espacement entre les sections */
-            background: #fff; /* Fond blanc pour chaque section */
-            padding: 15px; /* Espacement interne autour du texte */
-            border-radius: 8px; /* Bords arrondis */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'effet de relief */
-        }
-
-        h2 {
-            color: #555; /* Couleur du texte */
-        }
-
-        .table {
-            background: #fff; /* Fond blanc de la table */
-            border-radius: 8px; /* Bords arrondis */
+        @media (max-width: 768px) {
+            /* Ajustements pour écrans plus petits */
+            body {
+                padding-top: 120px; /* Augmenter le padding pour tenir compte de la barre de navigation repliée */
+            }
         }
     </style>
 </head>
@@ -75,7 +65,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <img src="docs/images/menu-icon.png" alt="Menu" width="30" height="30"> <!-- Icône de menu personnalisée -->
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -103,8 +95,8 @@
         </div>
     </nav>
 
-    <!-- En-tête de la page -->
-    <header>
+     <!-- En-tête de la page -->
+     <header>
         <h1>Questions et Réponses</h1> <!-- Titre principal -->
     </header>
     
@@ -113,7 +105,7 @@
         <!-- Section pour chaque question et réponse -->
         <section>
             <h2>1. Cette entreprise est-elle une usine, un magasin ou un bureau ?</h2>
-            <p>L'entreprise dans laquelle je travaille est une association.</p>
+            <p>L'entreprise dans laquelle je réalise mon stage était initialement une association, avant de devenir une SAS.</p>
             <p> Voici les différents types d'entreprises :</p>
             <h2>Formes juridiques et leurs caractéristiques</h2>
             <table class="table table-bordered">
@@ -197,18 +189,18 @@
         <section>
             <h2>2. Que produit l'entreprise (des biens ou des services) ? Lesquels ?</h2>
             <p>L'entreprise propose des prestations de services sur l'accompagnement à l'emploi.</p>
-            <p>L'accompagnement à l'emploi consiste à aider les personnes à trouver ou retrouver un travail. Cela passe par des conseils pour choisir un métier, des formations pour développer ses compétences, et un soutien pour préparer un CV ou un entretien. Il vise à rendre les candidats plus confiants et prêts pour le marché du travail. Ce sont souvent des organismes comme Pôle emploi, des associations ou des entreprises qui proposent cet accompagnement.</p>
+            <p>L'accompagnement à l'emploi consiste à aider les personnes à trouver ou retrouver un travail. Cela passe par des conseils pour choisir un métier, des formations pour développer ses compétences, et un soutien pour préparer un CV ou un entretien. Il vise à rendre les candidats plus confiants et prêts pour le marché du travail. Ce sont souvent des organismes comme France Travail, des associations ou des entreprises qui proposent cet accompagnement.</p>
         </section>
 
         <section>
             <h2>3. A quels types de clients s'adresse ces produits ou services ?</h2>
-            <p>Ces produits s'adressent à des demandeurs d'emplois.</p>
-            <p>Un demandeur d'emploi est une personne sans travail qui recherche activement un emploi. Cela peut inclure ceux qui n'ont jamais travaillé, qui ont perdu leur emploi ou qui souhaitent changer de poste. En général, ces personnes s'inscrivent auprès d'organismes comme Pôle emploi pour recevoir de l'aide et bénéficier de droits, comme des formations ou des allocations.</p>
+            <p>Ces services s'adressent à des bénéficiaires (les demandeurs d'emplois et les actifs), financer par les financeurs vu précédement.</p>
+            <p>Un demandeur d'emploi est une personne sans travail qui recherche activement un emploi. Cela peut inclure ceux qui n'ont jamais travaillé, qui ont perdu leur emploi ou qui souhaitent changer de poste. En général, ces personnes s'inscrivent auprès d'organismes comme France Travail pour recevoir de l'aide et bénéficier de droits, comme des formations ou des allocations.</p>
         </section>
 
         <section>
             <h2>4. Quels sont vos horaires ?</h2>
-            <p>Je fais du 8h30-17h00.</p>
+            <p>Un salariés chez SAS Envergure travaille de 8h30 à 17h du lundi au vendredi et certains samedis matin.</p>
         </section>
 
         <section>
@@ -221,6 +213,8 @@
                 <li>Stress collectif</li>
                 <li>Cyberattaques</li>
                 <li>Non-conformité légale</li>
+                <li>Les mauvais comportements des bénéficiaire</li>
+                <li>Des accidents sur le trajet</li>
             </ul>
         </section>
 

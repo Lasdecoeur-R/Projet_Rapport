@@ -17,16 +17,29 @@
         }
 
         .navbar-custom {
-            background-color: #007bff;
+            background-color: #007bff; /* Couleur de fond de la navbar */
         }
 
         .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
-            color: #fff;
+            color: #fff; /* Couleur du texte de la navbar */
         }
 
         .navbar-custom .nav-link:hover {
-            color: #d4d4d4;
+            color: #d4d4d4; /* Couleur du texte au survol */
+        }
+
+        /* Modification de l'icône de la navbar en blanc pour la version mobile */
+        .navbar-toggler {
+            border: none; /* Supprimer la bordure autour du bouton */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/menu.png'); /* Icône hamburger en blanc */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px; /* Largeur de l'icône */
+            height: 30px; /* Hauteur de l'icône */
         }
 
         h1 {
@@ -64,6 +77,20 @@
             text-align: center;
             color: #333;
         }
+
+        @media (max-width: 768px) {
+            /* Ajustements pour écrans plus petits */
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            .content-section {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -71,7 +98,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <a class="navbar-brand" href="index.html">Rapport de Stage</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span> <!-- Icône de menu hamburger blanche -->
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
@@ -110,11 +137,21 @@
         <h3>Déploiement des Postes de Travail et Équipements Réseau</h3>
         <p>Dans le cadre de mon stage, j'ai participé à la mise en place et au déploiement de postes de travail, de périphériques, ainsi que d’équipements réseau. Cela a inclus l'installation et la configuration des ordinateurs pour les nouveaux arrivants et autres utilisateurs finaux.</p>
         
+    <!-- Insertion de l'image juste après le mot "finaux" -->
+    <img src="docs/images/autres/AddComputeur.jpg" alt="Ajout utilisateur Active Directory" style="max-width:45%; height:auto;">
+
         <h3>Utilisation de l'Active Directory pour le Déploiement</h3>
         <p>Pour faciliter le déploiement et la gestion des postes, j'ai utilisé l'Active Directory. Cet outil m'a permis de gérer les utilisateurs, les groupes, les autorisations et les ressources au sein du réseau de l'entreprise, garantissant une administration sécurisée et centralisée des postes déployés.</p>
-        
+        <!-- Insertion de l'image juste après le mot "déployés" -->
+        <img src="docs/images/autres/AjoutUserAD.jpg" alt="Ajout utilisateur Active Directory" style="max-width:45%; height:auto;">
+
         <h3>Configuration Logicielle et Support</h3>
         <p>J'ai également assuré la configuration optimale des postes en installant les logiciels nécessaires, en effectuant des mises à jour, et en configurant des paramètres spécifiques pour chaque utilisateur. Mon rôle comprenait la résolution des problèmes techniques rencontrés par les utilisateurs afin de garantir une utilisation fluide des systèmes.</p>
+
+    <!-- Insertion de l'image juste après le mot "systèmes" -->
+    <img src="docs/images/autres/AgentAdd.jpg" alt="Ajout utilisateur Active Directory" style="max-width:45%; height:auto;">
+    <!-- Insertion de l'image juste après le mot "systèmes" -->
+    <img src="docs/images/autres/KitRetravailler.jpg" alt="Ajout utilisateur Active Directory" style="max-width:45%; height:auto;">
 
         <h2>Développement</h2>
         <h3>Création de Sites Web et Interfaces Utilisateur</h3>
@@ -123,6 +160,9 @@
         <h3>Utilisation d’Outils de Développement</h3>
         <p>Pour le développement, j'ai utilisé le logiciel Visual Studio Code, qui est un éditeur de code puissant et adapté à la création de projets web. De plus, j'ai utilisé GitHub pour héberger et gérer les versions des sites web développés, ce qui m'a permis de collaborer efficacement sur les projets et de conserver un historique des modifications apportées.</p>
         
+    <!-- Insertion de l'image juste après le mot "apportées" -->
+    <img src="docs/images/autres/VisualSC.jpg" alt="Ajout utilisateur Active Directory" style="max-width:45%; height:auto;">
+
         <h3>Lecture et Débogage de Code</h3>
         <p>Un autre aspect important de mon travail a été la lecture et le débogage de lignes de code. Cela impliquait de comprendre le code existant, d’identifier des erreurs potentielles, et de proposer des solutions pour améliorer les fonctionnalités ou corriger des bugs. Cette compétence est cruciale pour assurer la qualité et la stabilité des projets développés.</p>
     </main>
